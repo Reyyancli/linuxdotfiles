@@ -317,72 +317,15 @@ bindsym Ctrl+$mod+semicolon resize shrink width 20px
 bindsym Ctrl+$mod+l resize grow height 20px
 bindsym Ctrl+$mod+k resize shrink height 20px 
 
-#bindsym $mod+r mode "resize'
+bindsym Ctrl+$mod+i resize shrink height 20px; resize shrink width 20px
+bindsym Ctrl+$mod+o resize grow height 20px; resize grow width 20px
 
-mode "swap" {
-	# switch to workspace
-	bindsym $mod+1 workspace $ws1
-	bindsym $mod+2 workspace $ws2
-	bindsym $mod+3 workspace $ws3
-	bindsym $mod+4 workspace $ws4
-	bindsym $mod+5 workspace $ws5
-	bindsym $mod+6 workspace $ws6
-	bindsym $mod+7 workspace $ws7
-	bindsym $mod+8 workspace $ws8
-	bindsym $mod+9 workspace $ws9
-	bindsym $mod+0 workspace $ws10
-
-	# change focus
-	bindsym $mod+Left focus left
-	bindsym $mod+Down focus down
-	bindsym $mod+Up focus up
-	bindsym $mod+Right focus right
-
-	# change focus (without mod)
-	bindsym Left focus left
-	bindsym Down focus down
-	bindsym Up focus up
-	bindsym Right focus right
-
-	bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default";
-	bindsym Escape unmark "swapee"; mode "default";
-}
-
-
-
-#mode "swap" {
-#	# switch to workspace
-#	bindsym $mod+1 workspace $ws1
-#	bindsym $mod+2 workspace $ws2
-#	bindsym $mod+3 workspace $ws3
-#	bindsym $mod+4 workspace $ws4
-#	bindsym $mod+5 workspace $ws5
-#	bindsym $mod+6 workspace $ws6
-#	bindsym $mod+7 workspace $ws7
-#	bindsym $mod+8 workspace $ws8
-#	bindsym $mod+9 workspace $ws9
-#	bindsym $mod+0 workspace $ws10
-#
-#	# change focus
-#	bindsym $mod+Left focus left
-#	bindsym $mod+Down focus down
-#	bindsym $mod+Up focus up
-#	bindsym $mod+Right focus right
-#
-#	# change focus (without mod)
-#	bindsym Left focus left
-#	bindsym Down focus down
-#	bindsym Up focus up
-#	bindsym Right focus right
-#
-#	bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default";
-#	bindsym Escape unmark "swapee"; mode "default";
-#}
+# Swap containers
 
 bindsym $mod+p mark --add "swapee"
 bindsym $mod+u swap container with mark "swapee"; unmark "swapee"
 
-
+## Shutdown prompt for i3bar (uncomment to use)
 
 # shutdown / restart / suspend...
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
@@ -426,8 +369,8 @@ bindsym $mod+Mod1+m exec polybar
 default_border pixel 4
 default_floating_border pixel 5
 
-bindsym $mod+Ctrl+o border pixel 6
-bindsym $mod+Ctrl+i border pixel 4 
+bindsym $mod+Ctrl+u border pixel 6
+bindsym $mod+Ctrl+p border pixel 4 
 
 # Class 	border	background	text	indicator	child_border
 client.focused	#E57255	#E57255		#ffffff	#F2A686		#E57255
